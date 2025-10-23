@@ -1,0 +1,22 @@
+
+.vue-remote-container[data-v-bc390e83] {
+  padding: 20px;
+  border: 2px solid green;
+  border-radius: 8px;
+}
+h2[data-v-bc390e83] {
+  color: green;
+  margin: 0 0 10px 0;
+}
+button[data-v-bc390e83] {
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button[data-v-bc390e83]:hover {
+  background-color: darkgreen;
+}

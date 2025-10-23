@@ -1,18 +1,40 @@
 <template>
-  <div style="font-family: system-ui, Arial; padding: 24px">
-    <h1>Vue MFE — vue1</h1>
-    <p>This is a basic Vue 3 app for learning Module Federation.</p>
-    <p>Origin: <code>http://localhost:3001</code></p>
+  <div class="vue-remote-container">
+    <h2>Vue Remote App</h2>
+    <p>This is a Vue component loaded via Module Federation</p>
+    <button @click="handleClick">Click Me</button>
   </div>
 </template>
 
 <script setup>
-// no logic yet — just a basic app
+const handleClick = () => {
+  alert("Vue button clicked!");
+};
 </script>
 
-<style>
-body {
-  margin: 0;
-  background-color: #f5f5f5;
+<style scoped>
+.vue-remote-container {
+  padding: 20px;
+  border: 2px solid green;
+  border-radius: 8px;
+}
+
+h2 {
+  color: green;
+  margin: 0 0 10px 0;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: darkgreen;
 }
 </style>

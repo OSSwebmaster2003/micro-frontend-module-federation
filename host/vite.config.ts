@@ -1,0 +1,26 @@
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import federation from "@originjs/vite-plugin-federation";
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    federation({
+      name: "hostApp",
+      remotes: {
+        reactApp: "http://localhost:4174/assets/remoteEntry.js",
+        vueApp: "http://localhost:4173/assets/remoteEntry.js",
+      },
+      shared: ["vue"],
+    }),
+  ],
+  server: {
+    port: 3002,
+  },
+  build: {
+    target: "esnext",
+    minify: false,
+    cssCodeSplit: false,
+  },
+});
